@@ -1,0 +1,29 @@
+<!doctype html><html><head> 
+  <title>日本時間時計</title> 
+  <link rel="stylesheet" href="test.css"> 
+ <style type="text/css" id="dcoder_stylesheet">p{
+  color:#ff0000;
+}
+.blink {
+  animation: blinkAnime 1s infinite alternate;
+}
+@keyframes blinkAnime{
+   0% { color: #0000ff }
+ 100% { color: #ff0000 }
+}</style></head> 
+ <body>
+   日本標準時間 
+  <span class="blink"> 
+   <div id="T1"></div> </span> 
+  <p><button type="reset">リセット</button></p> 
+  <p><button type="submit" name="name" value="">ちびっちょに送信</button></p> 
+  <p><button type="bottun" onclick="location.href=
+   'https://twitter.com/kawasaki_satosi?s=09'
+   ">ちびっちょのTwitter</button></p> 
+ 
+<script type="text/javascript" id="dcoder_script">window.onload = function() {
+  setInterval(function() {
+    var dd = new Date();
+    document.getElementById("T1").innerHTML = dd.toLocaleString();
+  }, 1000);
+}</script></body></html>
